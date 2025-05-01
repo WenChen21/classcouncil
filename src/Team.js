@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import React, { useState } from "react";
+import Footer from "./Footer";
 
 function Team() {
   
@@ -33,18 +34,22 @@ function Team() {
     },
   };
 
+  const tabOrder = ["Overview", "2025", "2026", "2027", "2028"];
+
   return (
     <div>
     <Navbar />
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <div className="text-center mt-8">
-        <h1 className="text-4xl font-semibold text-red-600">Our Team</h1>
+      <div className="flex items-center justify-center py-12">
+        <h1 className="text-4xl font-extrabold text-red-700 drop-shadow-lg">
+          Our Team
+        </h1>
       </div>
 
       {/* Tabs */}
       <div className="flex justify-center mt-6 space-x-4">
-        {Object.keys(tabContent).map((tab) => (
+        {tabOrder.map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -69,6 +74,7 @@ function Team() {
         </p>
       </div>
     </div>
+    <Footer />
     </div>
   );
 }
