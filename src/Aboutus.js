@@ -5,57 +5,72 @@ import Footer from "./Footer";
 function About() {
   return (
     <>
-      <div>
-        <Navbar />
-      </div>
-      <div className="w-full h-[300px] overflow-hidden">
-        <img
-          className="w-full h-full object-cover opacity-50"
-          src="Class Councils Banner (Newsletter).png"
-          alt="classphoto"
-        />
-      </div>
+      <Navbar />
+
+      {/* Page Title */}
       <div className="flex items-center justify-center py-12">
-        <h1 className="text-4xl font-extrabold text-red-700 drop-shadow-lg">
+        <h1 className="text-5xl font-extrabold text-red-700 drop-shadow-lg">
           About Us
         </h1>
       </div>
-      <div className="max-w-4xl mx-auto px-6 py-12 space-y-10">
-        <section>
-          <h2 className="text-2xl font-bold text-red-800 mb-4">Our Mission</h2>
-          <p className="text-gray-700 leading-relaxed">
-            We are the Class Councils, a passionate group of students committed
-            to creating inclusive, engaging, and memorable experiences for our
-            classmates. Our mission is to foster school spirit, build community,
-            and serve as a voice for our peers.
+
+      {/* Main Content */}
+      <div className="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+        {/* Mission Section */}
+        <section className="text-center md:text-left">
+          <h2 className="text-3xl font-bold text-red-800 mb-4">Our Mission</h2>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Class Councils is a passionate, student-run organization dedicated to creating inclusive, meaningful, and spirited experiences. We build class identity, champion student voices, and bring joy to Cornell's campus.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-bold text-red-800 mb-4">What We Do</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>
-              Host events that bring students together and celebrate campus
-              culture
-            </li>
-            <li>Support student-led initiatives and community causes</li>
-            <li>
-              Advocate for class-wide concerns and ideas to school leadership
-            </li>
-          </ul>
+        {/* What We Do Section */}
+        <section className="text-center md:text-left">
+          <h2 className="text-3xl font-bold text-red-800 mb-6">What We Do</h2>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-xl text-red-700 mb-2">Campus Events</h3>
+              <p className="text-gray-700">
+                We host engaging events like formals, movie nights, and social gatherings to bring students together.
+              </p>
+            </div>
+            <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-xl text-red-700 mb-2">Community Impact</h3>
+              <p className="text-gray-700">
+                We support student-led causes, promote inclusion, and fund service projects that matter.
+              </p>
+            </div>
+            <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-xl text-red-700 mb-2">Class Advocacy</h3>
+              <p className="text-gray-700">
+                We serve as liaisons between students and administrators, making sure your voice is heard.
+              </p>
+            </div>
+            <div className="bg-gray-100 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+              <h3 className="font-semibold text-xl text-red-700 mb-2">Spirit & Tradition</h3>
+              <p className="text-gray-700">
+                From orientation to graduation, we help build a sense of belonging and pride in every class.
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section>
-          <h2 className="text-2xl font-bold text-red-800 mb-4">
-            Meet the Team
-          </h2>
-          <p className="text-gray-700 leading-relaxed">
-            Our council is made up of dedicated and diverse students from across
-            all years and majors. We believe in collaboration, creativity, and
-            community.
+        {/* Meet the Team Section */}
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-red-800 mb-4">Meet the Team</h2>
+          <p className="text-gray-700 text-lg mb-6 max-w-2xl mx-auto">
+            Our team includes dedicated students from all four class years, representing diverse backgrounds and majors. Together, we lead with passion and purpose.
           </p>
+          <a
+            href="/team"
+            className="inline-block px-6 py-3 bg-red-600 text-white rounded-lg shadow hover:bg-red-700 transition"
+          >
+            See Our Team
+          </a>
         </section>
       </div>
+
       <Footer />
     </>
   );
